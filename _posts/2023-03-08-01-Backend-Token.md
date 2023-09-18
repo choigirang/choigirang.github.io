@@ -7,7 +7,7 @@ lastmod: 2023-03-08 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
-categories: [BACKEND, REACT]
+categories: [BACKEND]
 tags: [backend, server, token, hashing, salt]
 ---
 
