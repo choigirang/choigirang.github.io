@@ -1,15 +1,14 @@
 ---
-title: "TypeScript 10장 - 적용타입 (1)"
-excerpt: "타입스크립트"
-
-categories: TypeScript
-tags: [타입스크립트, TypeScript, 이벤트타입]
-
-toc: true
-toc_sticky: true
-
-date: 2023-06-20
-last_modified_at: 2022-07-03
+layout: post
+title: TypeScript 10장 - HTML 적용타입
+author: admin
+date: 2023-06-20 00:00:00 +900
+lastmod: 2023-07-03 00:00:00 +900
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+categories: [TYPESCRIPT]
+tags: [typescript, javascript, event, react]
 ---
 
 # TypeScript
