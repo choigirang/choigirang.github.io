@@ -7,11 +7,11 @@ lastmod: 2023-03-06 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
-categories: [INTERVIEW] # 대문자로 작성
+categories: [INTERVIEW]
 tags: [https, network, ssl]
 ---
 
-# CS
+# Interview
 
 ## HTTPS
 
