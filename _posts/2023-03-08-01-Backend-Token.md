@@ -11,7 +11,7 @@ categories: [BACKEND]
 tags: [backend, server, token, hashing, salt]
 ---
 
-# React
+# Backend
 
 ## Hashing
 
