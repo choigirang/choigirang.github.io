@@ -66,7 +66,7 @@ function Parent({ children, lastChild }) {
 - _"DOM은 HTML, XML document와 상호작용하고 표현하는 API이다. DOM은 browser에서 로드되며, Node(이하 노드) 트리(각 노드는 document의 부분을 나타낸다)로 표현하는 document 모델이다. (ex. element, 문자열, 혹은 코멘트)"_
 - Document Object Model의 약자로, html,xml,css 등을 트리 구조로 인식하고, 데이터를 객체로 간주하고 관리한다.
   - Node 트리
-  - ![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/20584bcb-0102-4f7a-b01b-98cb6bbf9268)
+  - ![image](https://github.com/choigirang/none.github.io/assets/118104644/20584bcb-0102-4f7a-b01b-98cb6bbf9268)
 
 ### Node
 
@@ -89,7 +89,7 @@ function Parent({ children, lastChild }) {
 
 ### 브라우저 동작 원리
 
-![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/b1f81d73-5385-440f-8573-0f437421be4c)
+![image](https://github.com/choigirang/none.github.io/assets/118104644/b1f81d73-5385-440f-8573-0f437421be4c)
 
 1. 브라우저가 HTML을 전달받으면 이를 변환(파싱)하고 노드들로 이루어진 DOM 트리를 만든다.
 2. 외부의 CSS 파일과 각 노드들의 스타일을 파싱하여 스타일을 입힌 Render 트리를 만든다.
@@ -101,8 +101,8 @@ function Parent({ children, lastChild }) {
 
 ### Virtual DOM
 
-![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/0653f086-9080-4305-8223-b88885362255)
-![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/1f28c6f9-b656-443f-9c56-203d4b557b42)
+![image](https://github.com/choigirang/none.github.io/assets/118104644/0653f086-9080-4305-8223-b88885362255)
+![image](https://github.com/choigirang/none.github.io/assets/118104644/1f28c6f9-b656-443f-9c56-203d4b557b42)
 
 - 가상 DOM이 실제 DOM과 비교하여 변경된 부분만을 수정하는데, 만약 가상 DOM이 없었다면 모든 동그라미가 빨간색으로 바뀌었을 것이다.
 - `직접 DOM에 접근하는 것은 지양해야 한다.` 이는 DOM에 직접 접근해도 문제가 되진 않지만, DOM이 직접 변경된다면 사소한 변경 사항에도 전체가 리렌더링 되기 때문에 브라우저에 과부하가 올 수 있다.

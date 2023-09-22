@@ -7,8 +7,8 @@ lastmod: 2023-01-24 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
-categories: [REACT]  # 대문자로 작성
-tags: [react, components,router, ssr, csr, client, server, rendering]
+categories: [REACT] # 대문자로 작성
+tags: [react, components, router, ssr, csr, client, server, rendering]
 ---
 
 # React
@@ -19,7 +19,7 @@ tags: [react, components,router, ssr, csr, client, server, rendering]
 - 사용자에 요청에 페이지 전체를 바꿔서 보여주는 방식이 아닌 필요한 부분만을 로딩하는 방식이다.
 - 기존 브라우저는 웹페이지를 미리 준비해두었다가, 서버 측에서 데이터를 전달받아 렌더링하는 방식이었다.
 - 규모가 커지고 사용자와의 상호작용이 많아짐에 따라 기존의 서버 방식의 속도 저하 문제가 발생했다. 이를 해결하기 위한 것이 SPA방식이다.
-- CSR방식이다 ([SSR과 CSR](https://choigirang.github.io/CS/3-CS-SSR%EA%B3%BC-CSR/){: target="\_blank"})
+- CSR방식이다 ([SSR과 CSR](https://choigirang.github.io/posts/3-CS-SSR%EA%B3%BC-CSR/){: target="\_blank"})
 
 ## Router
 

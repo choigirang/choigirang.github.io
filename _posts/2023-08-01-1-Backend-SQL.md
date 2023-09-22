@@ -32,14 +32,14 @@ tags: [backend, server, dbms, rdbms]
 ### RDBMS
 
 - 테이블을 사용하여 데이터를 저장하고, 각 테이블은 정보가 수집되는 사람, 장소처럼 실제 개체를 나타낸다.
-  ![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/99ed9b27-c34e-45cf-b44c-65360f0b35ad){: .align-center}
-  ![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/bd25f589-55c7-4670-9585-f00af198b5cc){: .align-center}
+  ![image](https://github.com/choigirang/none.github.io/assets/118104644/99ed9b27-c34e-45cf-b44c-65360f0b35ad){: .align-center}
+  ![image](https://github.com/choigirang/none.github.io/assets/118104644/bd25f589-55c7-4670-9585-f00af198b5cc){: .align-center}
 
 #### SQL vs NoSql
 
 - RDBMS는 **SQL, NoSql** 크게 두 가지로 나눌 수 있다.
 
-![image](https://github.com/choigirang/choigirang.github.io/assets/118104644/b74aa7f5-05c6-40fb-9f12-fc41064a78bb){: .align-center}
+![image](https://github.com/choigirang/none.github.io/assets/118104644/b74aa7f5-05c6-40fb-9f12-fc41064a78bb){: .align-center}
 
 - `NoSQL`의 공통적인 특징은 스키마 없이 동작한다는 점이다.
   - 따라서 데이터 구조를 미리 정의할 필요가 없으며, 시간이 지나더라도 언제든지 바꿀 수 있기 때문에 비형식적인 데이터를 저장하는 데 용이하다.

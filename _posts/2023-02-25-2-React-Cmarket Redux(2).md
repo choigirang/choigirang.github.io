@@ -202,4 +202,4 @@ export default function ShoppingCart(){
 
 ```
 
-[다른 파일에 대한 설명보기](https://choigirang.github.io/react/4-React-Cmarket/){:target="\_blank"}
+[다른 파일에 대한 설명보기](https://choigirang.github.io/posts/4-React-Cmarket/){:target="\_blank"}

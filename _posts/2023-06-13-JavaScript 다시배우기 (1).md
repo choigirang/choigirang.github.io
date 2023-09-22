@@ -23,7 +23,6 @@ tags: [javascript, js, function, switch]
 
 - 사용자에게 확인창을 보여준다.
 - `alert("링크로 이동합니다")`
-  <img width="445" alt="스크린샷 2023-06-13 오전 3 31 28" src="https://github.com/choigirang/choigirang.github.io/assets/118104644/7577b509-179a-4ff4-8363-57d791c71ebc">
 
 - 추가적인 이벤트 설정도 가능하다.
 - `if(alert("링크로 이동합니다")) document.location = "http://exampleLink.com"`
@@ -35,15 +34,13 @@ tags: [javascript, js, function, switch]
 - 입력받은 값은 무조건 문자열로 표현되기 때문에 사용자가 입력한 값을 활용하고자 한다면 숫자형으로 변환하여 사용해야 한다. => `Number()`
 - `prompt("예약일을 입력해주세요", "2020-10-")`
 
-![예시](https://github.com/choigirang/choigirang.github.io/assets/118104644/ce39a09e-ef9e-45fd-a47c-83ee29946705)
+![예시](https://github.com/choigirang/none.github.io/assets/118104644/ce39a09e-ef9e-45fd-a47c-83ee29946705)
 
 ### confirm
 
 - 사용자에게 선택창을 보여준다.
 - 스크립트가 일시정지되고 스타일링이 불가능하다는 단점이 있다. => 대체 라이브러리 존재
 - `confirm("링크로 이동하시겠습니까?")`
-
-<img width="435" alt="image" src="https://github.com/choigirang/choigirang.github.io/assets/118104644/476af1ea-8b0f-4cdf-90c4-854a89abc770">
 
 - 마찬가지로 추가적인 이벤트 설정이 가능하다.
 
