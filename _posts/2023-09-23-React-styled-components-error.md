@@ -3,7 +3,7 @@ layout: post
 title: React 53장 - styled-components error
 author: admin
 date: 2023-09-23 00:00:00 +900
-lastmod: 2023-09-30  00:00:00 +900
+lastmod: 2023-10-02  00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
