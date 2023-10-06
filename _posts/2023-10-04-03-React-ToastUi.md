@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React 54장 - Toast Editor (2) 커스텀과 저장하여 사용하기
+title: React 55장 - Toast Editor (2) 커스텀과 저장하여 사용하기
 author: admin
 date: 2023-10-04 00:00:00 +900
 lastmod: 2023-10-04  00:00:00 +900
@@ -136,3 +136,24 @@ const saveHandler = () => {
 ```
 
 - 저장 버튼을 만들어 이벤트를 설정하면 현재 작성된 에디터의 내용을 확인할 수 있다.
+
+### Viewer
+
+- 작성한 내용을 보여줄 뷰어 또한 마찬가지이다.
+- 나의 경우에는 부모 컴포넌트로부터 `props` 넘겨받아 전달하는데, 똑같은 방식으로 `toast-ui`의 `Viewer`를 불러와서 사용하면 된다.
+
+```jsx
+import { Viewer } from "@toast-ui/react-editor";
+
+// 가져올 스타일시트
+
+export default function ToastViewer({ content }: { content: string }) {
+  return (
+    <Viewer
+      initialValue={content || ""}
+      theme="dark"
+      plugins={[[codeSyntaxHighlight, { highlighter: Prism }]]}
+    />
+  );
+}
+```
