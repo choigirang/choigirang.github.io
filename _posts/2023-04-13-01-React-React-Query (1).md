@@ -3,12 +3,12 @@ layout: post
 title: React 43장 - React-Query (1)
 author: admin
 date: 2023-04-21 00:00:00 +900
-lastmod: 2023-04-21 00:00:00 +900
+lastmod: 2023-10-07 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
 categories: [REACT]
-tags: [react, components, jsx, usequery, query]
+tags: [react, components, jsx, usequery, query, tanstack]
 ---
 
 # React
@@ -270,3 +270,8 @@ const { data, ...중략 } = useQuery(["comment", post.id], () =>
   - => 식별이 가능해야 다른 이벤트를 발생시켰을 때 그에 맞는 데이터를 다시 요청할 수 있다.
 - useQuery에 작성하는 비동기 함수는 값을 전달하거나, 바로 실행이 가능하다.
   - => `useQuery(["example", example],() => exampleFunc(example.data))`
+
+### React 18
+
+- 리액트 최신 버전인 18버전과 타입스크립트를 함께 사용하는 중, 리액트 쿼리를 사용하려고 한다면 에러가 발생할 수 있다.
+- 호환성 문제의 해결책으로 `react-query`가 아닌 `tanstack/react-query`를 설치하여 사용한다.
