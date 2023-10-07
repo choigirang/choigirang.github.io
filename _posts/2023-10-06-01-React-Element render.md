@@ -3,7 +3,7 @@ layout: post
 title: React 57장 - Element 추가해보기
 author: admin
 date: 2023-10-05 00:00:00 +900
-lastmod: 2023-10-05  00:00:00 +900
+lastmod: 2023-10-07  00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
@@ -94,3 +94,6 @@ const copyIcon: JSX.Element
 ```
 
 - 이런 타입에러였는데, `ReactDOM.render`는 `JSXElement`가 아닌 `HTMLElement`를 사용해야 한다는 에러였다.
+- `JSX`문법이라고 해도 렌더링 된 후에는 일반적인 요소들과 똑같은데 왜 타입 에러가 발생하는지 이해할 수 없었다.
+- 요소로 감싸주지 않아서 발생하는 에러인가 싶어 `React.Fragment`로 감싸주기도 해봤는데 불가능...
+- 에러에 대한 정보가 적어, 일단 변수로 사용하지 않고 자바스크립트 문법으로 요소를 생성해서 사용하기로 했지만 더 찾아보고 해결해봐야겠다.
