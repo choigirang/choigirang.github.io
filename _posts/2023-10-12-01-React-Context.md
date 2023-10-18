@@ -1,9 +1,9 @@
 ---
 layout: post
-title: React 59장 - React Context
+title: React 59장 - React Context (1)
 author: admin
-date: 2023-10-12 00:00:00 +900
-lastmod: 2023-10-12  00:00:00 +900
+date: 2023-10-18 00:00:00 +900
+lastmod: 2023-10-18  00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
@@ -100,6 +100,35 @@ const Children = () => {
   );
 };
 ```
+
+## with TypeScript
+
+- 타입스크립트를 사용하면 `createContext`의 초깃값인 `defaultValue`를 지정해주어야 한다.
+- 전역적으로 사용할 상태값의 형태와 `defaultValue`의 형태를 맞추어주어야 한다.
+- 예를 들어 `useState`로 상태값을 변경하는 `set`함수와 변경된 값을 전역적으로 사용한다고 했을 때, 형태는 아래와 같다.
+
+```tsx
+type DefaultValue = {
+  changeStr: string;
+  setChangeStr: React.Dispatch<React.SetStateAction<string>>;
+};
+const AppContext = createContext({
+  changeStr: "",
+  setChangeStr: () => {},
+});
+
+function App() {
+  const [changeStr, setChangeStr] = useState("none");
+
+  return <AppContext.Provider value={value}>// ...</AppContext.Provider>;
+}
+```
+
+- `defaultValue` 트리 안에 적절한 `provider`를 찾지 못했을 때 쓰이는 값이다.
+- 해당 `store`가 어떠한 `provider`에 할당되지 않은 경우, 완전 독립적인 `context`를 유지할때 쓰인다.
+- `provider`를 통해 `undefined`를 보낸다 해도 해당 `context`를 가진 컴포넌트는 `provider`를 읽지 못합니다.
+- `() => {}`의 형태는 함수의 형태를 나타낸다.
+- 타입에서는 `React.SetStateAction`이 쓰이지만 이 또한 함수이기 때문에 함수의 형태를 대입한다.
 
 ### vs Redux
 
