@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React 61장 - React Context (2)
+title: React 61장 - React Context (2) 여러 개의 context
 author: admin
 date: 2023-10-18 00:00:00 +900
 lastmod: 2023-10-22  00:00:00 +900
