@@ -1,9 +1,9 @@
 ---
 layout: post
-title: React 63장 - react-query 다시 배우기 (3) key관리하기
+title: React 63장 - react-query 다시 배우기 (3)
 author: admin
 date: 2023-10-26 00:00:00 +900
-lastmod: 2023-10-26  00:00:00 +900
+lastmod: 2023-10-27  00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
@@ -20,6 +20,7 @@ tags: [react, components, jsx, query, key]
 - 미니 프로젝트를 만들어보다가 `useMutation`을 사용하며 `queryClient.invalidateQueries`을 통해 쿼리 키를 초기화시켜, `mutate`를 통해 글을 작성했을 때 내가 작성한 데이터를 자동으로 받아오려고 했다.
 - 문제가 된 부분, 하나의 `useFetch`를 사용하고 있기 때문에 처음에 모든 데이터를 보여줄 때에는 쿼리 키를 `all`로 지정해줬다.
 - 그리고 내가 클릭한 카테고리에 대한 데이터를 받아올 때는 쿼리 키를 카테고리로 지정해줬다.
+- 여기서 문제점은 `invalidateQueries`로 쿼리 키를 초기화 해주더라도 개별 데이터를 관리하는 것이 잘못됐다.
 
 ```tsx
 // example
@@ -32,5 +33,3 @@ function Example(category: { category?: string }) {
   return { posts };
 }
 ```
-
-- 서버 코드에서 전달된 `params`로 데이터를 전체 데이터를 넘겨줄지 선별 데이터를 넘겨줄지 판가름 했다.
