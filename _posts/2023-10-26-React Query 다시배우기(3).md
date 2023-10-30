@@ -3,7 +3,7 @@ layout: post
 title: React 63장 - react-query 다시 배우기 (3) query key 관리하기
 author: admin
 date: 2023-10-26 00:00:00 +900
-lastmod: 2023-10-30  00:00:00 +900
+lastmod: 2023-10-31  00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
