@@ -81,7 +81,7 @@ useQuery(["example", "example2", "example1", "example3"], ...);
 useQuery("example") = useQuery(["example"])
 ```
 
-##### invalidateQueries(exact, predicate)
+##### invalidateQueries(exact, predicate, refetchActive)
 
 - 쿼리 키에 해당하는 데이터를 새로운 데이터로 교체할 수 있도록, 쿼리 데이터를 오래된 데이터로 취급하여 새로운 데이터로 업데이트 한다.
 - 새로운 데이터로 업데이트 한다는 것은 `refetch`와 동일하게 볼 수 있지만, `enabled` 옵션과 상관없이 무조건적으로 실행되는 `refetch`보다 더욱 스마트하게 사용할 수 있다.
@@ -125,7 +125,7 @@ useMutation(updateFn, {
 });
 ```
 
-- **predicate**로 `boolean`값을 정해 초기화시킬 수도 있다.
+- **predicate**로 `boolean`값을 정해 조건부로 초기화시킬 수도 있다.
 
 ```jsx
 useMutation(updateFn, {
@@ -139,6 +139,18 @@ useMutation(updateFn, {
 
 const removeQueryKey = useQuery(["key", { page: 1 }, { number: 1 }]);
 const notRemoveQueryKey = useQuery(["key", { number: 1 }, { page: 1 }]);
+```
+
+- **refetchActive**, `refetch`에 대한 옵션을 설정한다.
+
+```jsx
+// invalidate 시키지만 refetch 시키진 않는다.
+useMutation(..., {
+  onSuccess: queryClient.invalidateQueries({
+    queryKey: ["..."],
+    refetchActive: false
+  }),
+})
 ```
 
 ##### setQueryData, setQueriesData
@@ -163,4 +175,30 @@ useMutation(updateFn, {
     });
   },
 });
+```
+
+### 객체로 key 관리하기
+
+- 하드코딩된 쿼리 키는 휴먼에러가 발생하기 쉽고 유지보수 측면에서도 어려움이 있다.
+- 따라서 하나의 기능 당 하나의 키를 객체로 관리하는 것이 권장된다.
+
+```jsx
+const exampleKey = {
+  all: ["example"] as const,
+  lists: () => [...exampleKey.all, "list"] as const,
+  list: (filters: string) => [...exampleKey.lists(), {filter}] as const,
+  details: () => [...exampleKey.all, "detail"] as const,
+  detail: (id: number) => [...exampleKey.details(), id] as const
+}
+```
+
+```jsx
+// 모든 todos 삭제
+queryClient.removeQueries(todoKeys.all);
+
+// 모든 리스트 invalidate
+queryClient.invalidateQueries(todoKeys.lists());
+
+// prefetch 하나의 todo
+queryClient.prefetchQueries(todoKeys.detail(id), () => fetchTodo(id));
 ```
