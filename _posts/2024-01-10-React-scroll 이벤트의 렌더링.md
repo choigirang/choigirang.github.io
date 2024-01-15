@@ -120,3 +120,36 @@ useEffect(() => {
   };
 }, [scroll]);
 ```
+
+### 2024-01-15
+
+- 다음 프레임에서 실행되도록 하기 때문에 경우에 따라서 이벤트가 실행되지 않을 수도 있다.
+- 새로고침 시, 현재 내가 보고 있는 페이지를 기준으로 화면이 로드된다면 `scroll`을 실행하고 새로고침 했을 때, 이벤트가 등록되지만 아직 행위가 일어나지 않아서 스크롤은 다시 0으로 잡히게 된다.
+- 따라서 조금이라도 마우스를 움직여주어야만 이벤트가 발생하게 되는데 이를 방지하기 위해 최초 실행을 시켜준다.
+
+```jsx
+useEffect(() => {
+  let animationFrameId: number;
+
+  const scrollHandler = () => {
+    cancelAnimationFrame(animationFrameId);
+
+    animationFrameId = requestAnimationFrame(() => {
+      if (window.scrollY > 100 && !scroll) {
+        setScroll(true);
+      } else if (window.scrollY <= 100 && scroll) {
+        setScroll(false);
+      }
+    });
+  };
+
+  scrollHandler();
+
+  window.addEventListener("scroll", scrollHandler);
+
+  return () => {
+    window.removeEventListener("scroll", scrollHandler);
+    cancelAnimationFrame(animationFrameId);
+  };
+}, [scroll]);
+```
