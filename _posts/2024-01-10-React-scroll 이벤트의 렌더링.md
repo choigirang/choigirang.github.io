@@ -3,7 +3,7 @@ layout: post
 title: React 67장 - scroll 이벤트의 렌더링
 author: admin
 date: 2024-01-10 00:00:00 +900
-lastmod: 2024-01-10  00:00:00 +900
+lastmod: 2024-01-15  00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
