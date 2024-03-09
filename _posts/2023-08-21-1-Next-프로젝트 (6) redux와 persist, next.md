@@ -111,3 +111,7 @@ ReactDOM.render(<Root />, document.getElementById("root"));
 ### next-redux-wrapper
 
 **자료가 충분치 않아 보류🥲**
+
+### 2024.03.06
+
+[next-redux-wrapper](<https://choigirang.github.io/posts/Next-RTK,persist-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0(2)/>)
