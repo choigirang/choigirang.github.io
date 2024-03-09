@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Next 20장 - RTK(redux-toolkit), redux-persist 사용하기 (1)
+title: Next 20장 - RTK(redux-toolkit), redux-persist 사용하기 (2)
 author: admin
 date: 2024-03-06 00:00:00 +900
-lastmod: 2024-05-06 00:00:00 +900
+lastmod: 2024-03-06 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
