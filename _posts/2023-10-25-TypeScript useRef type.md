@@ -3,7 +3,7 @@ layout: post
 title: TypeScript 12장 - useRef 사용하기
 author: admin
 date: 2023-10-25 00:00:00 +900
-lastmod: 2023-10-25 00:00:00 +900
+lastmod: 2024-03-11 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
@@ -191,3 +191,9 @@ const inputRef = useRef<HTMLInputElement>();
 오버로드 2/2('(props: FastOmit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, never>): ReactElement<...> | null')에서 다음 오류가 발생했습니다.
 'MutableRefObject<HTMLInputElement | undefined>' 형식은 'LegacyRef<HTMLInputElement> | undefined' 형식에 할당할 수 없습니다.ts(2769)
 ```
+
+#### 2024-03-11
+
+- `next.js`에서 사용할 경우, `useRef`는 브라우저 환경에서 사용되는 훅이기에 `use client`를 작성해주어야 한다.
+- `useEffect`와 같이, 서버와 클라이언트에서 모두 동작할 수 있는 훅이 있는 반면에, **useRef**는 직접적으로 DOM에 접근하는만큼 서버 환경에서 사용할 수 없거나 예기치 않은 동작을 발생시킬 수 있다.
+- 따라서 클라이언트 컴포넌트로 동작하도록 명시해주어야 한다.
