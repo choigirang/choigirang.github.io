@@ -8,7 +8,7 @@ sitemap:
   changefreq: monthly
   priority: 0.5
 categories: [JAVASCRIPT]
-tags: [interpreter, compiler, nodejs]
+tags: [interpreter, compiler, nodejs, hoisting]
 ---
 
 # Javascript
