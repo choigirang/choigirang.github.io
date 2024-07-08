@@ -8,7 +8,7 @@ sitemap:
   changefreq: monthly
   priority: 0.5
 categories: [JAVASCRIPT]
-tags: []
+tags: [var, object, instance]
 ---
 
 # Javascript
