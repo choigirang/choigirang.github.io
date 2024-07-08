@@ -3,12 +3,12 @@ layout: post
 title: Javascript 22장 - 인터프리터, 컴파일러, Node.js, 호이스팅
 author: admin
 date: 2024-06-29 00:00:00 +900
-lastmod: 2024-06-29 00:00:00 +900
+lastmod: 2024-07-08 00:00:00 +900
 sitemap:
   changefreq: monthly
   priority: 0.5
 categories: [JAVASCRIPT]
-tags: [interpreter, compiler, nodejs, hoisting]
+tags: [interpreter, compiler, nodejs, hoisting, function]
 ---
 
 # Javascript
@@ -72,3 +72,33 @@ var = score;
 - 자바스크립트 엔진이 소스코드를 한 줄씩 실행하기에 앞서, 모든 소스코드의 평가 과정을 거치면서 소스코드를 실행하기 위한 준비를 한다.
 - 소스 코드의 평가 과정이 끝나면 모든 선언문을 제외한 소스코드를 한 줄씩 순차적으로 실행한다.
 - **모든 선언문은 이처럼 어디에 있든 상관없이 다른 코드보다 먼저 실행되며, 선언이 어디에 위치하는지와 상관없이 변수를 참조할 수 있다.**
+
+### 변수와 함수의 호이스팅
+
+#### 변수
+
+- 선언만 호이스팅되고 초기화는 원래 위치에서 이루어진다.
+- 선언 이전에 접근하면 `undefined`가 발생한다.
+- var는 호이스팅되며 undefined가 발생하지만, let과 const는 TDZ(Temporal Dead Zone)로 인해 초기화 전 접근이 금지된다.
+
+#### 함수
+
+- 함수 표현식은 변수 호이스팅의 규칙을 따르며, 함수 선언문은 전체가 호이스팅된다.
+- 변수와 함수명이 같을 경우, 함수 선언이 변수 선언보다 우선된다.
+- 함수 선언문의 전체가 호이스팅 된다는 것은, 식별자만 호이스팅 되는 것이 아니라 함수의 정의(function의 부분) 또한 끌어올려져서 함수 선언 전 호출(기능 가능)이 가능하다는 것이다.
+
+```jsx
+// 함수 표현식
+method1(); // TypeError
+
+const method1 = () => {
+  console.log("함수 표현식");
+};
+
+// 함수 선언문
+method2(); // 함수 선언문
+
+function method2() {
+  console.log("함수 선언문");
+}
+```
