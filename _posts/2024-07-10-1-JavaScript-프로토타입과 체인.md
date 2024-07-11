@@ -8,7 +8,7 @@ sitemap:
   changefreq: monthly
   priority: 0.5
 categories: [JAVASCRIPT]
-tags: [prototype, . chain, overiding]
+tags: [prototype, chain, overiding]
 ---
 
 # Javascript
