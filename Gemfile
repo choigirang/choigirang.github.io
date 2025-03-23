@@ -29,4 +29,3 @@ end
 
 gem "github-pages", "=228"
 gem "jekyll", "=3.9.3"
-gem "jekyll-theme-chirpy"
