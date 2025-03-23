@@ -58,10 +58,10 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.github-pages-deploy.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: github-pages-deploy
+        id: deployment
         uses: actions/deploy-pages@v2
