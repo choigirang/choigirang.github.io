@@ -28,5 +28,5 @@ if RUBY_PLATFORM =~ /linux-musl/
 end
 
 gem "github-pages", "=228"
-gem "jekyll", "=3.9.3"
+gem "jekyll", "~> 4.2"
 gem "jekyll-theme-chirpy", github: "chirpy/jekyll-theme-chirpy"
