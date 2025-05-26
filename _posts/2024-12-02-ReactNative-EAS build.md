@@ -127,3 +127,4 @@ Two common reasons:
 - 이 경우 로컬에서 ```eas build --locale``` 시행이 된다면 eas 문제
 - `clear cache` 를 적용하여 빌드
 - ```eas build -p android --profile preview --clear-cache```
+- ```eas build --platform ios --profile development --clear-cache --local```
